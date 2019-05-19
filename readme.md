@@ -6,8 +6,7 @@ A simple python application that uses the Azure vision api to perform the follow
 3. Extract the text from the image and return as json
 4. convert the image to a thumbnail
 
-Created By: Steve Owens
-Creation Date: 19th May 2019
+
 
 ## Setup:
 1. create a resource group in Azure
@@ -15,4 +14,7 @@ Creation Date: 19th May 2019
 3. update the aivisionapi.py file parameters with the resource group name and congnitives service vision resource name
 4. update the url variable in the app/app.py with the link the image you want to run the ai against
 
-https://github.com/sowens81
+[Steve Owens@Github](https://github.com/sowens81)
+
+Created By: Steve Owens<br>
+Creation Date: 19th May 2019
