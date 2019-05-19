@@ -9,7 +9,9 @@ FROM python:3
 COPY .devcontainer/settings.vscode.json /root/.vscode-remote/data/Machine/settings.json
 
 # Install git, process tools
-RUN apt-get update && apt-get -y install git procps
+RUN apt-get update && apt-get -y install git procps curl apt-transport-https lsb-release gnupg
+
+RUN curl -sL https://aka.ms/InstallAzureCLIDeb | bash
 
 RUN mkdir /workspace
 WORKDIR /workspace
@@ -25,4 +27,3 @@ RUN if [ -f "requirements.txt" ]; then pip install -r requirements.txt && rm req
 RUN apt-get autoremove -y \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
-
